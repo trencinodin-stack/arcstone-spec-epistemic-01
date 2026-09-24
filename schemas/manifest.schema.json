@@ -1,0 +1,11 @@
+﻿{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ArcstoneManifestSchema",
+  "type": "object",
+  "properties": {
+    "component_id": { "type": "string" },
+    "spec_id": { "type": "string" },
+    "synchronization_hash": { "type": "string" }
+  },
+  "required": ["component_id", "spec_id", "synchronization_hash"]
+}

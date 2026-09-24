@@ -1,0 +1,17 @@
+﻿# ===
+# EMBEDDED REPOSITORY MANIFEST BLOCK (GOV-05 / MAN-001 COMPLIANT)
+# ===
+component_id: "SPEC-77E01R01"
+spec_id: "ARC-SPEC-2026-EPISTEMIC-01"
+canonical_title: "The Epistemic Network Protocol Master Specification"
+architectural_layer: "Layer 0: Upstream Master Specification"
+lifecycle_status: "LOCKED"
+baseline_release_tag: "v1.3.1-LOCKED"
+synchronization_hash: "A-77-DELTA-SHIELD-LOCKED"
+sovereign_constancy: "C_ops == 0 [INVARIANT_CLAMP]"
+temporal_override_floor: "tau_override <= 11.99ms [INVARIANT_CLAMP]"
+memory_ceiling: "S_max <= 4096B [INVARIANT_CLAMP]"
+protocol_name: "Epistemic Network Protocol (ENP)"
+master_index_reference: "ARC-SPEC-2026-MSAB-01 (REV-02)"
+formal_audit_spec_reference: "ARC-AUDIT-2026-V14.6"
+zenodo_doi_anchor: "10.5281/zenodo.22665852"

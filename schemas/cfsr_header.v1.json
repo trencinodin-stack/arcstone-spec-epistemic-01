@@ -1,0 +1,12 @@
+﻿{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CfsrHeaderV1",
+  "description": "Packed 64-byte Little-Endian CFSR Sync Frame",
+  "type": "object",
+  "properties": {
+    "magic_bytes": { "type": "string", "const": "0x41524353" },
+    "poset_status": { "type": "integer", "enum": [0, 10, 32, 40] },
+    "substatus_mask": { "type": "integer" }
+  },
+  "required": ["magic_bytes", "poset_status", "substatus_mask"]
+}

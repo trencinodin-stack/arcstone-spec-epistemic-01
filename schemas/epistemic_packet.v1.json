@@ -1,0 +1,19 @@
+﻿{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "EpistemicPacketV1",
+  "type": "object",
+  "properties": {
+    "header": {
+      "type": "object",
+      "properties": {
+        "sync_hash": { "type": "string", "const": "A-77-DELTA-SHIELD-LOCKED" },
+        "component_id": { "type": "string" },
+        "timestamp_utc": { "type": "string", "format": "date-time" }
+      },
+      "required": ["sync_hash", "component_id"]
+    },
+    "merkle_root": { "type": "string", "pattern": "^0x[a-fA-F0-9]{64}$" },
+    "payload_bytes": { "type": "integer", "maximum": 4096 }
+  },
+  "required": ["header", "merkle_root", "payload_bytes"]
+}
