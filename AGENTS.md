@@ -20,8 +20,8 @@ When generating or auditing code for downstream Arcstone modules, agents MUST en
 
 1. **Memory Ceiling ($S_{\text{max}}$):** Payload envelopes must not exceed $4096\text{B}$ (`S_max <= 4096B`). Use `#![no_std]` static allocations only.
 2. **Temporal Override Clamp ($\tau_{\text{override}}$):** Execution latency must yield or abort at $\tau \le 11.99\text{ms}$.
-3. **POSIX Dominance Hierarchy:** State transitions must obey strict poset order:
-   $$\text{FAIL (POSIX 40)} \succ \text{FREEZE (POSIX 10)} \succ \text{PWC (POSIX 10)} \succ \text{REFUSAL (POSIX 32)} \succ \text{PASS (POSIX 0)}$$
+3. **POSIX Dominance Hierarchy (Normative Lock per ARC-ERR-2026-001):** State transitions must obey strict poset order:
+   $$\text{FAIL (POSIX 40)} \succ \text{FREEZE (POSIX 10)} \succ \text{PWC (POSIX 12)} \succ \text{REFUSAL (POSIX 32)} \succ \text{PASS (POSIX 0)}$$
 4. **Sovereign Constancy ($C_{\text{ops}} = 0$):** Zero operational drag. Do not introduce interactive prompts, un-bound retry loops, or ambient authority escalation.
 
 ---
