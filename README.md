@@ -1,8 +1,8 @@
-﻿# ARC-SPEC-2026-EPISTEMIC-01
+# ARC-SPEC-2026-EPISTEMIC-01
 ## The Epistemic Network Protocol (ENP) Master Specification
 
 **Status:** v1.3.1-LOCKED | **Lifecycle:** LOCKED / MASTER ANCHOR  
-**Anchor Hash:** `A-77-DELTA-SHIELD-LOCKED` | **Zenodo DOI:** [10.5281/zenodo.22665852](https://doi.org/10.5281/zenodo.22665852)
+**Anchor Hash:** `A-77-DELTA-SHIELD-LOCKED` | **Zenodo DOI:** [10.5281/zenodo.22665852](https://doi.org/10.5281/zenodo.22665852) | **Master Errata DOI:** [10.5281/zenodo.23069559](https://doi.org/10.5281/zenodo.23069559)
 
 ---
 
@@ -31,8 +31,8 @@ This repository functions as the **upstream keystone specification layer** for t
    * **Static Memory Envelope:** `S_max <= 4096B` static payload buffer limit (`#![no_std]`, zero heap).
    * **Sovereign Constancy:** `C_ops = 0` (Zero Operational / Founder Drag).
 
-4. **POSIX Poset Dominance Hierarchy:**
-   `FAIL (POSIX 40) > FREEZE (POSIX 10) > PWC (POSIX 10) > REFUSAL (POSIX 32) > PASS (POSIX 0)`
+4. **POSIX Poset Dominance Hierarchy (Normative Lock per ARC-ERR-2026-001):**
+   `FAIL (POSIX 40) > FREEZE (POSIX 10) > PWC (POSIX 12) > REFUSAL (POSIX 32) > PASS (POSIX 0)`
 
 ---
 
