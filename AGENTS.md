@@ -20,8 +20,10 @@ When generating or auditing code for downstream Arcstone modules, agents MUST en
 
 1. **Memory Ceiling ($S_{\text{max}}$):** Payload envelopes must not exceed $4096\text{B}$ (`S_max <= 4096B`). Use `#![no_std]` static allocations only.
 2. **Temporal Override Clamp ($\tau_{\text{override}}$):** Execution latency must yield or abort at $\tau \le 11.99\text{ms}$.
-3. **POSIX Dominance Hierarchy (Normative Lock per ARC-ERR-2026-001):** State transitions must obey strict poset order:
-   $$\text{FAIL (POSIX 40)} \succ \text{FREEZE (POSIX 10)} \succ \text{PWC (POSIX 12)} \succ \text{REFUSAL (POSIX 32)} \succ \text{PASS (POSIX 0)}$$
+3. **Operational Dominance Hierarchy (Normative Lock per ARC-ERR-2026-001):** State transitions and kernel signals must obey the 6-tier operational poset ($E$):
+   $$\text{BREACH (POSIX 40)} \succ \text{REFUSAL (POSIX 32)} \succ \text{CORRUPT (POSIX 30)} \succ \text{PWC (POSIX 12)} \succ \text{FREEZE (POSIX 10)} \succ \text{PASS (POSIX 0)}$$
+   * **Functorial Translation Bridge ($\Phi : L \to E$):** The 5-element pre-ingress join-semilattice ($L = \{\text{PASS}, \text{PWC}, \text{CORRUPT}, \text{REFUSAL}, \text{BREACH}\}$) maps faithfully to $\operatorname{Im}(\Phi) = \{0, 12, 30, 32, 40\}$.
+   * **Endofunctorial Yield Invariant:** POSIX Exit 10 (`FREEZE`) operates strictly outside $\operatorname{Im}(\Phi)$ as an internal runtime rate-limiting/scheduling clamp ($\tau_{\text{override}} \le 11.99\text{ ms}$). PWC is normatively locked exclusively to POSIX Exit 12.
 4. **Sovereign Constancy ($C_{\text{ops}} = 0$):** Zero operational drag. Do not introduce interactive prompts, un-bound retry loops, or ambient authority escalation.
 
 ---
