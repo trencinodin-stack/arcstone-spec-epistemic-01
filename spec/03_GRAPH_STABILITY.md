@@ -17,6 +17,6 @@ Where:
 
 ### Enforcement Clamps
 
-* **$\text{GSI} = 1.0$:** Complete structural alignment. Normal operation (`PASS`).
-* **$0.95 \le \text{GSI} < 1.0$:** Minor drift detected. Triggers `PWC` (POSIX 10).
-* **$\text{GSI} < 0.95$:** Severe topology distortion. Triggers immediate `FREEZE` / `FAIL` state.
+* **$\text{GSI} = 1.0$:** Complete structural alignment. Normal operation (`PASS`, POSIX 0).
+* **$0.95 \le \text{GSI} < 1.0$:** Minor drift detected. Triggers `PWC` (POSIX 12).
+* **$\text{GSI} < 0.95$:** Severe topology distortion. Triggers immediate `FREEZE` (POSIX 10) / `BREACH` (POSIX 40) containment.
